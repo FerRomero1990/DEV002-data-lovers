@@ -1,4 +1,4 @@
-export default {
+const champDat = [{
   type: "champion",
   format: "standAloneComplex",
   version: "6.24.1",
@@ -6972,4 +6972,5 @@ export default {
       }
     }
   }
-};
+}]
+console.log(champDat)
