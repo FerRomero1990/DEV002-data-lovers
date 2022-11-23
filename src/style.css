@@ -1,7 +1,26 @@
 body {
-    background-image: url("fondopantallas.jpg");
-    background-size: cover;
+    background-image: url("fondopantallas.jpg");;
+    background-size: 100%;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+h1 {
+    margin: 0%;
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 3% 30% 3%;
+    font-family: 'Rye';
+    color: #F5D215;
+    font-size: 500%;
+    display: flex;
+    align-self: center;
+    align-items: center;
+}
+p {
+    margin: 0%;
+    position: relative;
+    padding: 3% 30% 3%;
 }
 .card1 {
     margin: 0%;
