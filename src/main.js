@@ -1,8 +1,12 @@
 //import {} from './data.js';
 //import {} from './data/lol/lol.js';
 
+import { peticion } from "./data.js";
+
 //console.log(champDat);
 
-crearCardChamp(champDat);
+peticion()
 
-function crearCardChamp(champDat)
+//crearCardChamp(champDat);
+
+//function crearCardChamp(champDat)
