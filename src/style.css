@@ -1,24 +1,33 @@
 body {
-    background-image: url("fondopantallas.jpg");;
-    background-size: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("fondopantallas.jpg");
+    background-size: 320% auto;
+    background-position: 50%;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 h1 {
-    margin: 0%;
+    margin: 10% 20%;
     position: relative;
-    width: auto;
-    height: auto;
-    padding: 3% 30% 3%;
+    text-align: center;
     font-family: 'Rye';
     color: #F5D215;
-    font-size: 500%;
+    font-size: 900%;
     display: flex;
-    align-self: center;
-    align-items: center;
 }
-p {
-    margin: 0%;
+header {
+    margin: 5%;
     position: relative;
-    padding: 3% 30% 3%;
+    text-align: center;
+    font-family: 'Rye';
+    color: #F5D215;
+    font-size: 400%;
+    display: flex;
+}
+.container {
+    margin: 0%;
 }
