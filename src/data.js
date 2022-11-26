@@ -24,12 +24,26 @@ export const peticion = async () =>{
     //se crea las etiquetas dinamicas
     const nameChamp = document.createElement("p")
     const image = document.createElement("img")
+    const apodoChamp = document.createElement("p")
+    const rolChamp = document.createElement("p")
+    const ataqueChamp = document.createElement("p")
+    const defensaChamp = document.createElement("p")
+    const magiaChamp = document.createElement("p")
+    const dificultadChamp = document.createElement("p")
+    //teniendo en cuenta que los datos de ataque, defensa, magia y dificultad están dentro de otro objeto
+    //se llama ese objeto seguido del otro objeto de ahi info.difficulty
+    dificultadChamp.textContent =item.info.difficulty
+    magiaChamp.textContent = item.info.magic
+    defensaChamp.textContent = item.info.defense
+    ataqueChamp.textContent = item.info.attack
+    rolChamp.textContent = item.tags
+    apodoChamp.textContent = item.title
     //al atributo src le colocamos el enlace
     image.src = item.splash
     //al textContent le colocamos los nombres
     nameChamp.textContent = item.name
     //accedemos al fragment y le hacemos un append
-    fragment.append(nameChamp,image)
+    fragment.append(nameChamp,image,apodoChamp,rolChamp,ataqueChamp,defensaChamp,magiaChamp,dificultadChamp)
     //dentro de un contenedor metemos todas las etiquetas creadas
     contenedor.append(fragment)
     console.log(item.name)

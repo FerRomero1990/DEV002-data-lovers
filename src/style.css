@@ -4,7 +4,7 @@ body {
     box-sizing: border-box;
     min-height: 100vh;
     width: 100%;
-    background-image: url("fondopantallas.jpg");
+    background-image: url("fondopantallas.png");
     background-size: 320% auto;
     background-position: 50%;
     background-repeat: no-repeat;
