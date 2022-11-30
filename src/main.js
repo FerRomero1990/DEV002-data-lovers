@@ -9,4 +9,4 @@ peticion()
 
 //crearCardChamp(champDat);
 
-//function crearCardChamp(champDat)
+//function crearCardChamp(peticion) 
