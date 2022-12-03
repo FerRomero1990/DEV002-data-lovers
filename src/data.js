@@ -11,6 +11,10 @@ export const peticion = async () =>{
       templateGallery.querySelector('.gallery__img').src = item.splash
       templateGallery.querySelector('.gallery__name').textContent=item.name
       templateGallery.querySelector('.gallery__surname').textContent=item.title
+      templateGallery.querySelector('.gallery__attack').textContent=('Ataque ' + (item.info.attack))
+      templateGallery.querySelector('.gallery__defense').textContent=('Defensa ' + (item.info.defense))
+      templateGallery.querySelector('.gallery__magic').textContent=('Magia ' + (item.info.magic))
+      templateGallery.querySelector('.gallery__difficulty').textContent=('Dificultad ' + (item.info.difficulty))
   
       const clone = templateGallery.cloneNode(true)
       fragment.append(clone)
