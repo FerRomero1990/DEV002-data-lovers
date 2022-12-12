@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   body{
     color: white;
     background-color: black;
@@ -11,7 +11,7 @@
   }
   h1 {
       margin: 5% 20%;
-      position: relative; 
+      position: relative;
       text-align: center;
       text-shadow: 1px 5px 1px white;
       font-family: 'Rye';
@@ -82,7 +82,7 @@
     height: 100%;
   }
   .gallery__info{
-    transform: perspective(500px) rotateY(0deg);
+    transform: rotateY(0deg);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,7 +101,7 @@
     text-align: center;
   }
   .gallery__reverse{
-    transform: perspective(500px) rotateY(180deg);
+    transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -109,16 +109,19 @@
     padding : 40% 10%;
   }
   .gallery__card:hover .gallery__info {
-    transform: perspective(500px) rotateY(180deg);
+    transform: rotateY(180deg);
   }
   .gallery__card:hover .gallery__reverse {
-    transform: perspective(500px) rotateY(360deg);
+    transform: rotateY(360deg);
   }
-  
+  .gallery__name{
+    margin-top: 20px;
+  }
+
   @media screen and (min-width: 640px) {
     .gallery{
-  
+
   grid-auto-rows: 25rem;
-  
+
   }
   }
