@@ -1,12 +1,13 @@
-//import {} from './data.js';
-//import {} from './data/lol/lol.js';
 
 import { peticion } from "./data.js";
 
-//console.log(champDat);
-
 peticion()
 
-//crearCardChamp(champDat);
+/*import { champDat } from "./data/lol/lol.js";
+console.log(champDat);*/
 
-//function crearCardChamp(peticion) 
+/*import { filtChampFighter } from "./data/lol/lol.js";
+
+filtChampFighter()
+
+console.log(filtChampFighter);*/

@@ -28,6 +28,15 @@
       font-size: 200%;
       display: flex;
   }
+  .card-search{
+    display: grid;
+    place-content: center;
+    padding: 0 0 5% 0;
+  }
+  .filtro-champions{
+    position: center;
+    padding: 0 0 5% 0;
+  }
   img{
     width: 100%;
   }

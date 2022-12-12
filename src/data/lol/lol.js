@@ -1,4 +1,4 @@
-champDat = [{
+export const champDat = [{
   type: "champion",
   format: "standAloneComplex",
   version: "6.24.1",
@@ -6973,3 +6973,5 @@ champDat = [{
     }
   }
 }]
+
+
