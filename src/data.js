@@ -1,18 +1,18 @@
 import { champDat } from './data/lol/lol.js'
-console.log(champDat[0].data)
+// console.log(champDat[0].data)
 
 
 /*export const peticion = async () =>{
     const link = 'data/lol/lol.json';
     const response = await fetch(link)
     const datos = await response.json()*/
-  
+
     export function peticion(){
 
     const contenedor = document.getElementById("gallery")
     const fragment = document.createDocumentFragment()
     const templateGallery = document.getElementById('template-gallery').content;
-  
+
     for (const item of Object.values(champDat[0].data)) {
       templateGallery.querySelector('.gallery__img').src = item.splash
       templateGallery.querySelector('.gallery__name').textContent=item.name
@@ -27,17 +27,15 @@ console.log(champDat[0].data)
       fragment.append(clone)
     }
     contenedor.append(fragment)
-    console.log(typeof(champDat[0].data))
+    // console.log(typeof(champDat[0].data))
+    // filtros
     let arregloChampions = Object.entries(champDat[0].data)
     console.log(arregloChampions);
     let fighters = arregloChampions.filter(champion => {
-      console.log(champion[1].tags);
-      champion[1].tags === "Fighter"});
+      // console.log(champion[1].tags);
+      return champion[1].tags === "Fighter"
+    });
     console.log(fighters)
-    /*let arreglos = [...datos.data]
-    console.log(arreglos);
-    let peleadores = datos.data.filter(champion => champion.tags === "Fighter")
-    console.log(peleadores);*/
   };
 
   peticion()
@@ -61,11 +59,20 @@ console.log(champDat[0].data)
   });
 }
 busqueda('.card-filter', '.card');*/
-  
 
 
 
 
 
 
-  
+
+
+/*const button = document.querySelector('boton')
+
+
+button.addEventListener('click',()=>{
+  for (const iterator of personajes) {
+    personajes.fighters = 'figgter'
+
+  }
+})*/
