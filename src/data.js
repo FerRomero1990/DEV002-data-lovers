@@ -22,13 +22,13 @@ import { champDat } from './data/lol/lol.js'
     contenedor.append(fragment)
     // console.log(typeof(champDat[0].data))
     // filtros
- const filter = () => {
-     const fighterBtn = document.getElementById('fighter');
-     const tankBtn = document.getElementById('tank');
-     const mageBtn = document.getElementById('mage');
-     const assasinBtn = document.getElementById('assasin');
-     const supportBtn = document.getElementById('support');
-     const marksmanBtn = document.getElementById('marksman');
+    const filter = () => {
+    const fighterBtn = document.getElementById('fighter');
+    const tankBtn = document.getElementById('tank');
+    const mageBtn = document.getElementById('mage');
+    const assasinBtn = document.getElementById('assasin');
+    const supportBtn = document.getElementById('support');
+    const marksmanBtn = document.getElementById('marksman');
 
 
     fighterBtn.addEventListener("click",() => {
@@ -109,29 +109,27 @@ import { champDat } from './data/lol/lol.js'
       }
     })
 
- }
- filter()
-
-
+}
+filter()
 
     //busqueda
-const search = () => {
-    const searchImput = document.getElementById("search");
+search = () => {
+  const searchImput = document.getElementById("search");
 
   searchImput.addEventListener('keyup',(event)=>{
-      const cards = document.querySelectorAll(".gallery__card")
-       for (const card of cards) {
-       const minuscula =  card.textContent.toLowerCase()
+      let cards = document.querySelectorAll(".gallery__card")
+      for (const card of cards) {
+      const minuscula =  card.textContent.toLowerCase()
         //console.log(minuscula.includes());
         if (!minuscula.includes(event.target.value)) {
           card.classList.add('ocultar')
         }else{
           card.classList.remove('ocultar')
         }
-       }
-       if (event.key === 'Escape') {
+      }
+      if (event.key === 'Escape') {
         event.target.value = ''
-       }
+      }
   })
 }
 search()
