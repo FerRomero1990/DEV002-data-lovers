@@ -1,19 +1,12 @@
 import { champDat } from './data/lol/lol.js'
-// console.log(champDat[0].data)
 
-
-/*export const peticion = async () =>{
-    const link = 'data/lol/lol.json';
-    const response = await fetch(link)
-    const datos = await response.json()*/
-
-    export function peticion(){
+    export function peticion(dataActual){
 
     const contenedor = document.getElementById("gallery")
     const fragment = document.createDocumentFragment()
     const templateGallery = document.getElementById('template-gallery').content;
-
-    for (const item of Object.values(champDat[0].data)) {
+      console.log(dataActual)
+    for (const item of Object.values(dataActual)) {
       templateGallery.querySelector('.gallery__img').src = item.splash
       templateGallery.querySelector('.gallery__name').textContent=item.name
       templateGallery.querySelector('.gallery__surname').textContent=item.title.toUpperCase()
@@ -27,52 +20,19 @@ import { champDat } from './data/lol/lol.js'
       fragment.append(clone)
     }
     contenedor.append(fragment)
-    // console.log(typeof(champDat[0].data))
+    console.log(typeof(champDat[0].data))
     // filtros
     let arregloChampions = Object.entries(champDat[0].data)
     console.log(arregloChampions);
-    let fighters = arregloChampions.filter(champion => {
-      // console.log(champion[1].tags);
-      return champion[1].tags === "Fighter"
-    });
+
+    let fighters = arregloChampions.filter(champion =>champion[1].tags.includes("Fighter"));
     console.log(fighters)
+    let tanks = arregloChampions.filter(champion => champion[1].tags.includes("Tank"));
+    let mages = arregloChampions.filter(champion => champion[1].tags.includes("Mage"));
+    let assassins = arregloChampions.filter(champion => champion[1].tags.includes("Assassin"));
+    let supports = arregloChampions.filter(champion => champion[1].tags.includes("Support"));
+    let marksmans = arregloChampions.filter(champion => champion[1].tags.includes("Marksman"));
+
   };
 
-  peticion()
-
-  /*const busqueda = (input, selector) => {
-
-  document.addEventListener('keyup', (event) => {
-    if (event.target.matches(input)) {
-      const elements = document.querySelector(selector);
-      for (const element of elements) {
-        const elementSmall = element.textContent.toLowerCase();
-
-        elementSmall.includes(event.target.value) ?
-        element.classList.remove('filter')
-        : element.classList.add('filter');
-      }
-      if (event.key === 'Escape') {
-        event.target.value = '';
-      }
-    }
-  });
-}
-busqueda('.card-filter', '.card');*/
-
-
-
-
-
-
-
-
-/*const button = document.querySelector('boton')
-
-
-button.addEventListener('click',()=>{
-  for (const iterator of personajes) {
-    personajes.fighters = 'figgter'
-
-  }
-})*/
+  peticion(champDat[0].data)

@@ -1,7 +1,7 @@
 
 import { peticion } from "./data.js";
 
-peticion()
+//peticion()
 
 /*import { champDat } from "./data/lol/lol.js";
 console.log(champDat);*/
