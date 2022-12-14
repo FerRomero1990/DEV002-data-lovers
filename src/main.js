@@ -3,11 +3,7 @@ import { peticion } from "./data.js";
 
 peticion()
 
-/*import { champDat } from "./data/lol/lol.js";
-console.log(champDat);*/
+document.getElementById("btnfighter").addEventListener("click", function (){
+    
+})
 
-/*import { filtChampFighter } from "./data/lol/lol.js";
-
-filtChampFighter()
-
-console.log(filtChampFighter);*/

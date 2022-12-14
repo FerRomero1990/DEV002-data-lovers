@@ -1,5 +1,5 @@
 import { champDat } from './data/lol/lol.js'
-console.log(champDat[0].data)
+//console.log(champDat[0].data)
 
 
 /*export const peticion = async () =>{
@@ -27,17 +27,15 @@ console.log(champDat[0].data)
       fragment.append(clone)
     }
     contenedor.append(fragment)
-    console.log(typeof(champDat[0].data))
+    //console.log(typeof(champDat[0].data))
     let arregloChampions = Object.entries(champDat[0].data)
-    console.log(arregloChampions);
-    let fighters = arregloChampions.filter(champion => {
-      console.log(champion[1].tags);
-      champion[1].tags === "Fighter"});
-    console.log(fighters)
-    /*let arreglos = [...datos.data]
-    console.log(arreglos);
-    let peleadores = datos.data.filter(champion => champion.tags === "Fighter")
-    console.log(peleadores);*/
+    let fighters = arregloChampions.filter(champion => champion[1].tags.includes("Fighter"));
+    let tanks = arregloChampions.filter(champion => champion[1].tags.includes("Tank"));
+    let mages = arregloChampions.filter(champion => champion[1].tags.includes("Mage"));
+    let assassins = arregloChampions.filter(champion => champion[1].tags.includes("Assassin"));
+    let supports = arregloChampions.filter(champion => champion[1].tags.includes("Support"));
+    let marksmans = arregloChampions.filter(champion => champion[1].tags.includes("Marksman"));
+
   };
 
   peticion()
