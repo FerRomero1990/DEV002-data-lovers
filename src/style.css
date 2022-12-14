@@ -45,6 +45,7 @@
   }
   li{
     list-style: none;
+    cursor: pointer;
   }
   .layout{
     max-width: 1200px;
@@ -124,4 +125,8 @@
   grid-auto-rows: 25rem;
 
   }
+  }
+
+  .ocultar{
+    display: none;
   }
