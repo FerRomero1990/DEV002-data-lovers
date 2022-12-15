@@ -1,9 +1,9 @@
 
 import { peticion } from "./data.js";
 
-peticion()
+//peticion()
 
-document.getElementById("btnfighter").addEventListener("click", function (){
+/*document.getElementById("btnfighter").addEventListener("click", function (){
     
-})
+})*/
 

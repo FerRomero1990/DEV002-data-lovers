@@ -6,50 +6,62 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <h1>League of Legends</h1>
-    <header class="texto-de-intro">
-      <p>
-        ¡¡A la hora de cada partida lo más importante es ganar!!<br />
-        <br />
-        Esto se puede lograr a través de un equipo con jugadores que tengan
-        Champions con roles que complementen<br />
-        el nuestro; así poder cubrir y responder a todos los ataques que puedan
-        surgir a lo largo de la batalla.<br />
-        <br />
-        En esta página web se muestran las caracteristicas vitales de los
-        Champions lo cual te será de utilidad,<br />
-        saber quienes podrían complementar tu rol y de esta manera conformar un
-        equipo ganador.
-      </p>
-    </header>
-    <section id="filtros">
-      <div class="card-search">
-        <input type="search" placeholder="Buscar por Champion" class="card-filter">
-      </div>
-      <div class="filtro-champions">
-        <input type="radio" name="tags" value="Fighter" id="btnfighter"><label for="fighter">Fighter</label>
-        <input type="radio" name="tags" value="tank" id="btntank"><label for="tank">Tank</label>
-        <input type="radio" name="tags" value="mage" id="btnmage"><label for="mage">Mage</label>
-        <input type="radio" name="tags" value="assassin" id="btnassassin"><label for="assassin">Assasin</label>
-        <input type="radio" name="tags" value="support" id="btnsupport"><label for="support">Support</label>
-        <input type="radio" name="tags" value="marksman" id="btnmarksman"><label for="marksman">Marksman</label>
-    </div>
-    </section>
-
+<header>
+  <div class="header__content">
+    <div class="logo">
+                <a href="/"><img src="logoLOL.png" alt="Logo"></a>
+            </div>
+            <!-- Menu hamburgesa -->
+            <div class="menu-toggle" id="menu-toggle"><i class="fi fi-nav-icon-grid-a"></i></div>
+            <!-- menu -->
+            <nav class="nav" id="nav">
+                <ul class="menu">
+                    <li class="menu__item">Filtrar<ul>
+          <li id="fighter">Fighter</li>
+              <li id="tank">Tank</li>
+              <li id="mage">Mage</li>
+              <li id="assasin">Assassin</li>
+              <li id="support">Support</li>
+              <li id="marksman">Marksman</li>
+        </ul></li>
+        <li class="menu__item">Ordenar
+          <ul>
+            <li id="az">De la A a la Z</li>
+            <li id="za">De la Z a la A</li>
+          </ul>
+        </li>
+        <li class="menu__item">Calcular</li>
+                </ul>
+            </nav>
+        </div>
+  </div>
+</header>
     <main>
-      <!-- gallery -->
-      <div class="gallery layout" id="gallery">
-
-      </div>
-      <template id="template-gallery">
-        <div class="gallery__card">
-          <div class="gallery__info">
-            <img src="" alt="" class="gallery__img"/>
-              <h2 class="gallery__name">Katte</h2>
-              <h4 class="gallery__tags">Roles</h4>
-          </div>  
-
+      <div class="container">
+        <p>
+        ¡¡A la hora de cada partida lo más importante es ganar!
+            Esto se puede lograr a través de un equipo con jugadores que tengan
+            Champions con roles que complemente
+            el nuestro; así poder cubrir y responder a todos los ataques que puedan
+            surgir a lo largo de la batalla
+            En esta página web se muestran las caracteristicas vitales de los
+            Champions lo cual te será de utilidad
+            saber quienes podrían complementar tu rol y de esta manera conformar un
+            equipo ganador.
+          </p>
+          <form action="">
+            <input type="text" placeholder="Buscar por nombre" id="search">
+          </form>
+        <!-- gallery -->
+        <div class="gallery layout" id="gallery">
+        </div>
+        <template id="template-gallery">
+          <div class="gallery__card">
+            <div class="gallery__info">
+              <img src="" alt="" class="gallery__img"/>
+                <h2 class="gallery__name">Katte</h2>
+                <h4 class="gallery__tags">Roles</h4>
+            </div>
             <div class="gallery__reverse">
               <h3 class="gallery__surname">Fer</h3><br>
               <h4 class="gallery__attack">Ataque</h4>
@@ -57,8 +69,9 @@
               <h4 class="gallery__magic">Magia</h4>
               <h4 class="gallery__difficulty">Dificultad</h4>
             </div>
-        </div>  
-      </template>
+          </div>
+        </template>
+      </div>
     </main>
 
     <script src="main.js" type="module"></script>
