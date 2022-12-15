@@ -182,6 +182,7 @@ descendente()
 
     //busqueda
 
+
   const searchImput = document.getElementById("search");
 
   searchImput.addEventListener('keyup',(event)=>{
@@ -201,6 +202,29 @@ descendente()
   })
 
 searchImput()
+
+searchImput()
+
+//ordenar
+
+/*const descendente = () => {
+
+  const azBtn = document.getElementById("az")
+
+  azBtn.addEventListener("click", () => {
+    let champDesc = document.querySelectorAll(".gallery__name")
+    for (let i = 0; i < champDesc.length; i++) {
+      let nameChamp = champDesc.sort((a,b));
+
+      if(a.champDesc()<b.champDesc())
+      return -1;
+      else{
+        return 1;
+      }
+      console.log(nameChamp)
+    }
+  })*/
+
 
     // let arregloChampions = Object.entries(dataActual)
     // console.log(arregloChampions);
