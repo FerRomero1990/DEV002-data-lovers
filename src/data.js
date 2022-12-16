@@ -135,31 +135,70 @@ filter()
 
 ascendente()*/
 
-const descendente = () => {
+      function descendente() {
 
-  const zaBtn = document.getElementById("za")
+        const zaBtn = document.getElementById("za")
 
-  azBtn.addEventListener("click", () => {
-    let champDesc = document.querySelectorAll(".gallery__name")
-    for (let i = 0; i < champDesc.length; i++) {
-      let nameChamp = champDesc.sort((a,b));
-      
-      if(a.champDesc()>b.champDesc())
-      return -1;
-      else{
-        return 1;
+      zaBtn.addEventListener("click",() => {
+      let cardsDesc = document.querySelectorAll(".gallery__name");
+      for (const card of cardsDesc) {
+        let championDesc = card.textContent.name;
+        console.log(cardsDesc);
+
+          let nameChampDesc = championDesc.sort((a, b));
+          console.log(nameChampDesc);
+
+          if (a.nameChampDesc() > b.nameChampDesc())
+            return -1;
+          else {
+            return 1;
+          }
+        }
+      })
+
+        /*const zaBtn = document.getElementById("za");
+        const contenedor = document.getElementById("gallery");
+        const templateGalleryDesc = document.getElementById('template-gallery').content;
+        for (const item of Object.values(champDat[0].data)) {
+        const nombreChamp = templateGalleryDesc.querySelectorAll(".gallery__name").textContent=item;
+        const cloneDesc = templateGalleryDesc.cloneNode(true);
+        contenedor.append(fragment);
+          fragment.append(cloneDesc);
+          console.log(nombreChamp);
+          
+          let descChamp = nombreChamp.sort((a, b));
+
+          if (a.descChamp() > b.descChamp())
+              return -1;
+            else {
+              return 1;
+            }
+        }*/
+        /*const zaBtn = document.getElementById("za");
+
+        zaBtn.addEventListener("click", () => {
+          const nodeListNameChamp = document.querySelectorAll('.gallery__name');
+          const nodeListNCarray = Array.apply(0,nodeListNameChamp);
+          nodeListNCarray.map();
+          console.log(nodeListNCarray);
+          for (let i = 0; i < champDesc.length; i++) {
+            let nameChamp = champDesc.sort((a, b));
+
+            if (a.champDesc() > b.champDesc())
+              return -1;
+            else {
+              return 1;
+            }
+          }
+        });*/
+
+        /*let champDesc = dataActual.sort((a,b) => {
+          if(a.name.toLowerCase()<b.name.toLowerCase()) return -1;
+          if(a.name.toLowerCase()<b.name.toLowerCase()) return -1;
+          return 0;
+        })
+        console.log(champDesc);*/
       }
-      console.log(nameChamp)
-    }
-  })
-
-  /*let champDesc = dataActual.sort((a,b) => {
-    if(a.name.toLowerCase()<b.name.toLowerCase()) return -1;
-    if(a.name.toLowerCase()<b.name.toLowerCase()) return -1;
-    return 0;
-  })
-  console.log(champDesc);*/
-}
 
 descendente()
 //console.log(dataActual)
@@ -182,6 +221,7 @@ descendente()
 
     //busqueda
 
+    const search = () => {
 
   const searchImput = document.getElementById("search");
 
@@ -200,10 +240,8 @@ descendente()
         event.target.value = ''
       }
   })
-
-searchImput()
-
-searchImput()
+}
+search()
 
 //ordenar
 
