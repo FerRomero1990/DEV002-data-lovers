@@ -3,54 +3,59 @@
   <head>
     <meta charset="utf-8" />
     <title>League of Legends</title>
+    <link rel="icon" type="image/png" sizes="192x192"
+    href="favicon.ico">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css'></i>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/e64192a249.js" crossorigin="anonymous"></script>
+
   </head>
   <body>
-<header>
-  <div class="header__content">
+<header class="header">
+  <nav class="header__content">
     <div class="logo">
-                <a href="/"><img src="logoLOL.png" alt="Logo"></a>
-            </div>
-            <!-- Menu hamburgesa -->
-            <div class="menu-toggle" id="menu-toggle"><i class="fi fi-nav-icon-grid-a"></i></div>
-            <!-- menu -->
-            <nav class="nav" id="nav">
-                <ul class="menu">
-                    <li class="menu__item">Filtrar<ul>
-          <li id="fighter">Fighter</li>
-              <li id="tank">Tank</li>
-              <li id="mage">Mage</li>
-              <li id="assasin">Assassin</li>
-              <li id="support">Support</li>
-              <li id="marksman">Marksman</li>
-        </ul></li>
-        <li class="menu__item">Ordenar
-          <ul>
-            <li>De la A a la Z</li>
-            <li>De la Z a la A</li>
+      <a href="/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/LoL_icon.svg/2048px-LoL_icon.svg.png" alt="Logo" class="logo-img"></a>
+    </div>
+      <!-- Menu hamburgesa -->
+    <div class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+        <!-- menu -->
+    <nav class="nav" id="nav">
+          <ul class="menu">
+            <li class="menu__item  menu__item--hover">
+              <a href="" class="menu__link ">Filtrar</a>
+              <ul class="submenu">
+                <li class="menu__item" id="fighter"><a href="" class="menu__link">Fighter</a></li>
+                <li class="menu__item" id="tank"><a href="" class="menu__link">Tank</a></li>
+                <li class="menu__item" id="mage"><a href="" class="menu__link">Mage</a></li>
+                <li class="menu__item" id="assasin"><a href="" class="menu__link">Assassin</a></li>
+                <li class="menu__item" id="support"><a href="" class="menu__link">Support</a></li>
+                <li class="menu__item" id="marksman"><a href="" class="menu__link">Marksman</a></li>
+              </ul>
+            </li>
+            <li class="menu__item menu__item--hover">
+              <a href="" class="menu__link ">Ordenar</a>
+              <ul class="submenu">
+                <li class="menu__item"><a href="" class="menu__link">De la A a la Z</a></li>
+                <li id="za" class="menu__item"><a href="" class="menu__link">De la Z a la A</a></li>
+              </ul>
+            </li>
+            <li class="menu__item"><a href="" class="menu__link">Calcular</a></li>
           </ul>
-        </li>
-        <li class="menu__item">Calcular</li>
-                </ul>
-            </nav>
-        </div>
-  </div>
+        </nav>
+  </nav>
 </header>
     <main>
       <div class="container">
-        <p>
-        ¡¡A la hora de cada partida lo más importante es ganar!
-            Esto se puede lograr a través de un equipo con jugadores que tengan
-            Champions con roles que complemente
-            el nuestro; así poder cubrir y responder a todos los ataques que puedan
-            surgir a lo largo de la batalla
-            En esta página web se muestran las caracteristicas vitales de los
-            Champions lo cual te será de utilidad
-            saber quienes podrían complementar tu rol y de esta manera conformar un
-            equipo ganador.
-          </p>
-          <form action="">
-            <input type="text" placeholder="Buscar por nombre" id="search">
+        <p>¡¡A la hora de cada partida lo más importante es ganar!!
+        Esto se puede lograr a través de un equipo con jugadores que tengan
+            Champions con roles que complemente el nuestro; así poder cubrir y responder
+            a todos los ataques que puedan surgir a lo largo de la batalla
+        En esta página web se muestran las caracteristicas vitales de los
+            Champions lo cual te será de utilidad, saber quienes podrían complementar tu rol y de esta manera conformar un
+            equipo ganador.</p>
+
+          <form class="form" action="">
+            <input type="text" placeholder="Buscar por campeón" id="search">
           </form>
         <!-- gallery -->
         <div class="gallery layout" id="gallery">
