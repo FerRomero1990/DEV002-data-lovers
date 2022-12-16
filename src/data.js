@@ -242,15 +242,18 @@ descendente()
   })
 }
 search()
+}
+search()
 
 //ordenar
 
-/*const descendente = () => {
+const descendente = () => {
 
-  const azBtn = document.getElementById("az")
+  const zaBtn = document.getElementById("za")
 
-  azBtn.addEventListener("click", () => {
+  zaBtn.addEventListener("click", () => {
     let champDesc = document.querySelectorAll(".gallery__name")
+    console.log(champDesc)
     for (let i = 0; i < champDesc.length; i++) {
       let nameChamp = champDesc.sort((a,b));
 
@@ -259,9 +262,9 @@ search()
       else{
         return 1;
       }
-      console.log(nameChamp)
+      //console.log(nameChamp)
     }
-  })*/
+  })
 
 
     // let arregloChampions = Object.entries(dataActual)
@@ -289,8 +292,8 @@ search()
     // let mages = arregloChampions.filter(champion => champion[1].tags.includes("Mage"));
     // let assassins = arregloChampions.filter(champion => champion[1].tags.includes("Assassin"));
     // let supports = arregloChampions.filter(champion => champion[1].tags.includes("Support"));
-    // let marksmans = arregloChampions.filter(champion => champion[1].tags.includes("Marksman"));*/
+    // let marksmans = arregloChampions.filter(champion => champion[1].tags.includes("Marksman"));
 
-};
+  };
 
   peticion(champDat[0].data)
