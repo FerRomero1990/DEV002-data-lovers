@@ -19,6 +19,34 @@
       font-size: 700%;
       display: flex;
   }
+
+  p{
+    color: white;
+    margin: 20px 200px;
+    font-size: 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+  }
+
+
+  .form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form input {
+    width: 40%;
+    height: 30px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+
   header {
       margin: 5%;
       position: relative;
@@ -28,6 +56,32 @@
       font-size: 200%;
       display: flex;
   }
+
+
+  .header__content{
+    background: grey;
+    height: 100px;
+    width: 100%;
+  }
+  .logo{
+    position: absolute;
+    padding: 20px 50px;
+  }
+  .lologo{
+    height: 80px;
+  }
+
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+
+  .menu, .submenu{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+
   .card-search{
     display: grid;
     place-content: center;
@@ -81,6 +135,7 @@
     object-fit: cover;
     object-position: 70%;
     height: 100%;
+    border-bottom: 3px solid #c28f2c;
   }
   .gallery__info{
     transform: rotateY(0deg);
@@ -88,7 +143,6 @@
     flex-direction: column;
     align-items: center;
     padding :1em 0;
-    /*border-top: 2px solid #c28f2c;*/
   }
   .gallery__name{
     margin-top: 20px;

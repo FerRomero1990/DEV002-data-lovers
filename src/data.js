@@ -113,7 +113,7 @@ import { champDat } from './data/lol/lol.js'
 filter()
 
     //busqueda
-
+  const search = () => {
   const searchImput = document.getElementById("search");
 
   searchImput.addEventListener('keyup',(event)=>{
@@ -131,17 +131,18 @@ filter()
         event.target.value = ''
       }
   })
-
-searchImput()
+}
+search()
 
 //ordenar
 
-/*const descendente = () => {
+const descendente = () => {
 
-  const azBtn = document.getElementById("az")
+  const zaBtn = document.getElementById("za")
 
-  azBtn.addEventListener("click", () => {
+  zaBtn.addEventListener("click", () => {
     let champDesc = document.querySelectorAll(".gallery__name")
+    console.log(champDesc)
     for (let i = 0; i < champDesc.length; i++) {
       let nameChamp = champDesc.sort((a,b));
 
@@ -150,38 +151,10 @@ searchImput()
       else{
         return 1;
       }
-      console.log(nameChamp)
+      //console.log(nameChamp)
     }
-  })*/
-
-
-    // let arregloChampions = Object.entries(dataActual)
-    // console.log(arregloChampions);
-
-    // let fighters = arregloChampions.filter(champion =>champion[1].tags.includes("Fighter"));
-    // console.log(fighters)
-    // fighterBtn.addEventListener('click',() => {
-    //   for (const item of fighters) {
-    //   templateGallery.querySelector('.gallery__img').src = item[1].splash
-    //   templateGallery.querySelector('.gallery__name').textContent=item[1].name
-    //   templateGallery.querySelector('.gallery__surname').textContent=item[1].title.toUpperCase()
-    //   templateGallery.querySelector('.gallery__attack').textContent=('Attack: ' + (item[1].info.attack))
-    //   templateGallery.querySelector('.gallery__defense').textContent=('Defense: ' + (item[1].info.defense))
-    //   templateGallery.querySelector('.gallery__magic').textContent=('Magic: ' + (item[1].info.magic))
-    //   templateGallery.querySelector('.gallery__difficulty').textContent=('Difficulty: ' + (item[1].info.difficulty))
-    //   templateGallery.querySelector('.gallery__tags').textContent=item[1].tags
-    //    const clone = templateGallery.cloneNode(true)
-    //   fragment.append(clone)
-    // }
-    // contenedor.append(fragment)
-    // })
-
-    // let tanks = arregloChampions.filter(champion => champion[1].tags.includes("Tank"));
-    // let mages = arregloChampions.filter(champion => champion[1].tags.includes("Mage"));
-    // let assassins = arregloChampions.filter(champion => champion[1].tags.includes("Assassin"));
-    // let supports = arregloChampions.filter(champion => champion[1].tags.includes("Support"));
-    // let marksmans = arregloChampions.filter(champion => champion[1].tags.includes("Marksman"));
-
-  };
-
-  peticion(champDat[0].data)
+  })
+};
+descendente()
+}
+peticion(champDat[0].data)
