@@ -1,4 +1,4 @@
-import { champDat } from './data/lol/lol.js'
+// import { champDat } from './data/lol/lol.js'
 
     export function peticion(dataActual){
 
@@ -157,4 +157,4 @@ const descendente = () => {
 };
 descendente()
 }
-peticion(champDat[0].data)
+// peticion(champDat[0].data)
