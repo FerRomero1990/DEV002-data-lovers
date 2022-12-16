@@ -5,7 +5,3 @@ import { showMenu } from "./menu.js";
 peticion(champDat[0].data)
 showMenu()
 
-/*document.getElementById("btnfighter").addEventListener("click", function (){
-    
-})*/
-
