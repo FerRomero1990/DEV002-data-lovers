@@ -1,5 +1,5 @@
 
-export const ordenarAz = (dataActual) => {
+/*export const ordenarAz = (dataActual) => {
 
    const championUser = () => {
       const contenedor = document.getElementById("gallery")
@@ -33,4 +33,4 @@ export const ordenarAz = (dataActual) => {
       }
       championUser()
 })
-}
+}*/

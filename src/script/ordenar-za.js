@@ -1,5 +1,5 @@
 
-export const ordenarZa= (dataActual) => {
+/*export const ordenarZa= (dataActual) => {
 
    const championUser = () => {
       const contenedor = document.getElementById("gallery")
@@ -35,4 +35,4 @@ export const ordenarZa= (dataActual) => {
       }
       championUser()
 })
-}
+}*/

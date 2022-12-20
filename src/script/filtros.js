@@ -1,4 +1,4 @@
-    export const filter = () => {
+    /*export const filter = () => {
     const fighterBtn = document.getElementById('fighter');
     const tankBtn = document.getElementById('tank');
     const mageBtn = document.getElementById('mage');
@@ -97,4 +97,4 @@
       }
     })
 
-}
+}*/

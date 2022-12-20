@@ -1,9 +1,13 @@
-import { example, anotherExample } from '../src/data.js';
+import { filter } from "./script/filtros.js";
 
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+describe('Test para la funcion de filtrado', () => {
+  const filter = []
+  const elemento = "Mage"
+  const filtrando = filter(filter, elemento)
+
+  it('La funcion no deberia contener el elemento seleccionado', () => {
+    expect(filtrando).not.toContain(elemento);
   });
 
   it('returns `example`', () => {

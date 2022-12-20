@@ -1,7 +1,7 @@
-export function peticion(data){
+/*export function peticion(data){
 
   const championUser = () => {
-      const contenedor = document.getElementById("gallery")
+    const contenedor = document.getElementById("gallery")
     const fragment = document.createDocumentFragment()
     const templateGallery = document.getElementById('template-gallery').content;
 
@@ -23,4 +23,4 @@ export function peticion(data){
     contenedor.append(fragment)
     }
     championUser()
-}
+}*/

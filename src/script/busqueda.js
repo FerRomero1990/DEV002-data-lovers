@@ -1,4 +1,4 @@
-export const search = () => {
+/*export const search = () => {
   const searchImput = document.getElementById("search");
 
   searchImput.addEventListener('keyup',(event)=>{
@@ -16,4 +16,4 @@ export const search = () => {
         event.target.value = ''
       }
   })
-}
+}*/
