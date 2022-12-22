@@ -7,23 +7,33 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h6>League Of Legends</h6>
-    <div class="cards">
-      <div id="cards_champs">
-        <div class="card_front">
-          <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg" alt="" class="img_champ"/>
-            <h2 id="nameChamp">Fernanda</h2>
-            <h3 id="tagChamp">Estudiante</h3>
-        </div>
-          <div class="card_back">
-             <h3 id="titleChamp" class="gallery__title">Fer</h3>
-             <h4 id="attackChamp">ataque</h4>
-             <h4 id="defenseChamp">defensa</h4>
-             <h4 id="magicChamp">magia</h4>
-             <h4 id="difficultyChamp">dificultad</h4>
-          </div>
-      </div>
+  <h6>League Of Legends</h6>
+  <nav class="menu">
+    <div id="filtro_champions">
+        <select>
+          <option>Seleccione Rol</option>
+          <option value="Figther">Figther</option>
+          <option value="Tank">Tank</option>
+          <option value="Mage">Mage</option>
+          <option value="Assassin">Assassin</option>
+          <option value="Support">Support</option>
+          <option value="Marksman">Marksman</option>
+        </select>
+      <i></i>
     </div>
+          <div id="ordenado">
+              <select>
+                <option>Ordenar...</option>
+                <option value="az">De la A a la Z</option>
+                <option value="za">De la Z a la A</option>
+              </select>
+            <i></i>
+          </div>
+  </nav>
+    <div id="container">
+      <div class="cards">
+      </div>
+    </div>  
     <script defer src="main.js" type="module"></script>
   </body>
 </html>

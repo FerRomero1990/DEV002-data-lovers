@@ -1,26 +1,31 @@
-/*export function peticion(data){
+import { champDat } from './data/lol/lol.js';
 
-  const championUser = () => {
-    const contenedor = document.getElementById("gallery")
-    const fragment = document.createDocumentFragment()
-    const templateGallery = document.getElementById('template-gallery').content;
+export const extrayendoData = (datos) => {
+  return(
+  Object.values(datos.data));
+}
 
-    const championRandom = data.slice().sort(() => Math.random() - 0.5);
+export const filtrandoChampions = (selectedRole) => {
+  const filtroDatosChampions = Object.values(champDat.data);
+  let filtroFighter = filtroDatosChampions.filter(rol => rol.tags.includes(selectedRole));
+  return filtroFighter
+  /*let filtroTank = filtroDatosChampions.filter(rol => rol.tags.includes("Tank"));
+  let filtroMage = filtroDatosChampions.filter(rol => rol.tags.includes("Mage"));
+  let filtroAssasin = filtroDatosChampions.filter(rol => rol.tags.includes("Assassin"));
+  let filtroSupport = filtroDatosChampions.filter(rol => rol.tags.includes("Support"));
+  let filtroMarksman = filtroDatosChampions.filter(rol => rol.tags.includes("Marksman"));*/
+}
+filtrandoChampions()
 
-    for (const item of championRandom) {
-      templateGallery.querySelector('.gallery__img').src = item.splash
-      templateGallery.querySelector('.gallery__name').textContent=item.name
-      templateGallery.querySelector('.gallery__surname').textContent=item.title.toUpperCase()
-      templateGallery.querySelector('.gallery__attack').textContent=('Attack: ' + (item.info.attack))
-      templateGallery.querySelector('.gallery__defense').textContent=('Defense: ' + (item.info.defense))
-      templateGallery.querySelector('.gallery__magic').textContent=('Magic: ' + (item.info.magic))
-      templateGallery.querySelector('.gallery__difficulty').textContent=('Difficulty: ' + (item.info.difficulty))
-      templateGallery.querySelector('.gallery__tags').textContent=item.tags
-
-      const clone = templateGallery.cloneNode(true)
-      fragment.append(clone)
-    }
-    contenedor.append(fragment)
-    }
-    championUser()
-}*/
+export const ordenandoChampions = () => {
+  const ordenDatosChampions = Object.values(champDat.data);
+  let azChampions = ordenDatosChampions.sort((a, b) => {
+    if(a < b) return -1;
+    if(a > b) return 1;
+  })
+  let zaChampions = ordenDatosChampions.reverse((a, b) => {
+    if(a < b) return -1;
+    if(a > b) return 1;
+  })
+}
+ordenandoChampions()

@@ -8,26 +8,90 @@ body{
   background-size: cover;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+/* titulo LOL */
 h6{
   padding: 2%;
-  font-size: 300%;
+  font-size: 400%;
   text-align: center;
   color: goldenrod;
 }
-.cards{
+/* menú con las opciones de filtrado y ordenar */
+.menu{
+  padding: 0 20%;
+  column-count: 2;
+  grid-auto-columns: auto;
+}
+#filtro_champions, #ordenado, select{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+#filtro_champions{
+	max-width: 250px;
+	position: relative;
+}
+#filtro_champions select{
+	display: inline-block;
+	width: 100%;
+  cursor: pointer;
+	padding: 7px 10px;
+	height: 42px;
+	outline: 0; 
+	border: 0;
+  border-radius: 0;
+  background: #8f8c8c;
+  font-size: 1em;
+  color: rgb(14, 13, 13);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: 2px solid rgba(0,0,0,1);
+  border-radius: 12px;
   position: relative;
+  transition: all 0.25s ease;
+}
+#filtro_champions select:hover{
+	background: #f1f3f2;
+}
+#ordenado{
+	max-width: 250px;
+	position: relative;
+}
+#ordenado select{
+	display: inline-block;
+  width: 100%;
+  cursor: pointer;
+	padding: 7px 10px;
+	height: 42px;
+	outline: 0; 
+	border: 0;
+  border-radius: 0;
+  background: #8f8c8c;
+  font-size: 1em;
+  color: rgb(14, 13, 13);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: 2px solid rgba(0,0,0,1);
+  border-radius: 12px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+#ordenado select:hover{
+	background: #f1f3f2;
+}
+
+/* tarjetas */
+.cards{
   width: 50%;
   height: 70%;
+  column-count: 2;
+  display: flex;
+  flex-wrap: wrap;
 }
 #cards_champs{
   padding: 2%;
-  display: flex;
-  flex-direction: column;
 }
 .card_front{
   padding: 1%;
-  width: 40%;
-  height: 40%;
+  width: 30%;
+  height: 30%;
   background-color: black;
   color: white;
 }
@@ -37,6 +101,7 @@ h6{
   margin-bottom: 2%;
 }
 #nameChamp{
+  font-size: 300%;
   margin-bottom: 2%;
   text-align: center;
 }
@@ -45,12 +110,21 @@ h6{
   text-align: end;
 }
 .card_back{
-  padding: 1%;
-  width: 40%;
-  height: 40%;
+  padding: 2%;
+  width: 30%;
+  height: 30%;
   background-color: black;
   color: white;
-  display: flex;
-  flex-direction: column;
+}
+.title{
+  font-size: 170%;
+  padding: 2% 2% 2% 0;
 }
 
+/* Responsive */
+
+@media only screen and (min-width:900px){}
+
+@media only screen and ((max-width:900px) and (min-width:449px)){}
+
+@media only screen and ((max-width:449px) and (min-width:300px)){}
