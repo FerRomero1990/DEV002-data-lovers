@@ -7,6 +7,8 @@ const datosChampions = extrayendoData(champDat)
 //Imprimiendo cards en la página principal
 function cardsLol(champions){
     let container = document.getElementById("container")
+    //limpia la página
+    container.innerHTML = ''
     champions.forEach(champ => {
         container.innerHTML += `
     <div id="cards_champs">
@@ -28,9 +30,7 @@ function cardsLol(champions){
 cardsLol(datosChampions); 
 
 //Incluyendo filtrado
-
-
     
-    document.getElementById("fighter").addEventListener("click", () => {
-        
+    document.getElementById("filtro_roles").addEventListener('change', (evento) => {
+        cardsLol(filtrandoChampions(evento.target.value));
     });
