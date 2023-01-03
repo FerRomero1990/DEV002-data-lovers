@@ -1,23 +1,25 @@
 *,*:before, *:after{
   margin: 0;
   box-sizing: border-box;
-}
+} 
 body{
-  background-image: url('Fondo-LoL.png');
-  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('Fondo-LoL.png');
+  background-attachment: fixed;
   background-size: cover;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+  font-family: 'Griffy', cursive, sans-serif;
 }
 /* titulo LOL */
 h6{
   padding: 2%;
   font-size: 400%;
   text-align: center;
-  color: goldenrod;
+  color: #D6A805;
 }
 /* menú con las opciones de filtrado y ordenar */
 .menu{
-  padding: 0 20%;
+  margin: 0 0 0 5%;
+  padding: 0 20% 3% 20%;
   column-count: 2;
   grid-auto-columns: auto;
 }
@@ -40,9 +42,9 @@ h6{
 	border: 0;
   border-radius: 0;
   background: #8f8c8c;
-  font-size: 1em;
+  font-size: 1.3em;
   color: rgb(14, 13, 13);
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Griffy', cursive, sans-serif;
   border: 2px solid rgba(0,0,0,1);
   border-radius: 12px;
   position: relative;
@@ -65,9 +67,9 @@ h6{
 	border: 0;
   border-radius: 0;
   background: #8f8c8c;
-  font-size: 1em;
+  font-size: 1.3em;
   color: rgb(14, 13, 13);
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Griffy', cursive, sans-serif;
   border: 2px solid rgba(0,0,0,1);
   border-radius: 12px;
   position: relative;
@@ -80,10 +82,7 @@ h6{
 /* tarjetas */
 .cards{
   width: 50%;
-  height: 70%;
-  column-count: 2;
-  display: flex;
-  flex-wrap: wrap;
+  height: 80%;
 }
 #cards_champs{
   width: 100%;
@@ -91,9 +90,9 @@ h6{
   padding: 2%;
 }
 .card_front{
-  padding: 1%;
-  width: 30%;
-  height: 30%;
+  padding: 3%;
+  width: 80%;
+  height: 50%;
   background-color: black;
   color: white;
 }
@@ -112,20 +111,35 @@ h6{
   text-align: end;
 }
 .card_back{
-  padding: 2%;
-  width: 30%;
-  height: 30%;
+  padding: 3%;
+  width: 80%;
+  height: 50%;
   background-color: black;
   color: white;
 }
 .title{
-  font-size: 170%;
+  font-size: 120%;
   padding: 2% 2% 2% 0;
+}
+#container{
+  margin: 0 0 0 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  align-items: center;
 }
 
 /* Responsive */
 
-@media only screen and (min-width:900px){}
+@media only screen and (min-width:900px){
+  .menu{
+    margin: 0 0 0 5%;
+    padding: 0 20% 3% 20%;
+    flex-wrap: wrap;
+  }
+  
+}
 
 @media only screen and ((max-width:900px) and (min-width:449px)){}
 

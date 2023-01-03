@@ -10,18 +10,47 @@ export const filtrandoChampions = (selectedRole) => {
   let filtroRol = filtroDatosChampions.filter(rol => rol.tags.includes(selectedRole));
   return filtroRol;
 }
-filtrandoChampions()
 
-export const ordenandoChampions = () => {
-  const ordenDatosChampions = Object.values(champDat.data);
-  let azChampions = ordenDatosChampions.sort((a, b) => {
-    if(a < b) return -1;
-    if(a > b) return 1;
+export const ordenandoChampions = ( champDat, sortBy, sortOrder) => {
+  const ordDatos = champDat[data].sort((a, b) => {
+    if(a.name[sortBy] > b.name[sortBy]) {
+      if(sortOrder == "az")
+      {
+        return 1;
+      }
+      else {
+        return -1
+      }
+    }
+    if(a.name[sortBy] < b.name[sortBy]) {
+      if(sortOrder == "za")
+      {
+        return -1
+      }
+      else {
+        return 1
+      }
+    }
+    return 0;
+  });
+
+};
+
+
+/*export const ordenandoAzChampions = () => {
+  const ordenDatosChampionsAz = Object.values(champDat.data);
+  let azChampions = ordenDatosChampionsAz.sort((a, b) => {
+    if(a.name < b.name) return -1;
+    if(a.name > b.name) return 1;
   })
-  let zaChampions = ordenDatosChampions.reverse((a, b) => {
-    if(a < b) return -1;
-    if(a > b) return 1;
-  })
-  console.log(zaChampions)
+  return azChampions;
 }
-ordenandoChampions()
+
+export const ordenandoZaChampions = () => {
+  const ordenDatosChampionsZa = Object.values(champDat.data);
+  let zaChampions = ordenDatosChampionsZa.sort((a, b) => {
+    if(a.name > b.name) return -1;
+    if(a.name < b.name) return 1;
+  })
+  return zaChampions;
+}*/
