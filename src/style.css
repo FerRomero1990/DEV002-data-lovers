@@ -12,14 +12,14 @@ body{
 /* titulo LOL */
 h6{
   padding: 2%;
-  font-size: 400%;
+  font-size: 500%;
   text-align: center;
   color: #D6A805;
 }
 /* menú con las opciones de filtrado y ordenar */
 .menu{
   margin: 0 0 0 5%;
-  padding: 0 20% 3% 20%;
+  padding: 0 10% 3% 10%;
   column-count: 2;
   grid-auto-columns: auto;
 }
@@ -34,7 +34,7 @@ h6{
 }
 #filtro_champions select{
 	display: inline-block;
-	width: 100%;
+	width: 150%;
   cursor: pointer;
 	padding: 7px 10px;
 	height: 42px;
@@ -59,7 +59,7 @@ h6{
 }
 #ordenado select{
 	display: inline-block;
-  width: 100%;
+  width: 150%;
   cursor: pointer;
 	padding: 7px 10px;
 	height: 42px;
@@ -132,15 +132,133 @@ h6{
 
 /* Responsive */
 
-@media only screen and (min-width:900px){
+@media only screen and ((max-width:900px) and (min-width:449px)){
+  body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('Fondo-LoL.png');
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Griffy', cursive, sans-serif;
+  }
+  h6{
+    padding: 2%;
+    font-size: 550%;
+    text-align: center;
+    color: #D6A805;
+  }
   .menu{
-    margin: 0 0 0 5%;
-    padding: 0 20% 3% 20%;
-    flex-wrap: wrap;
+    margin: 0 0 3% 8%;
+    padding: 0;
+    column-count: 2;
+    grid-auto-columns: auto;
+  }
+  #filtro_champions select{
+    display: inline-block;
+    width: 125%;
+    cursor: pointer;
+    padding: 7px 10px;
+    height: 42px;
+    outline: 0; 
+    border: 0;
+    border-radius: 0;
+    background: #8f8c8c;
+    font-size: 1.3em;
+    color: rgb(14, 13, 13);
+    font-family: 'Griffy', cursive, sans-serif;
+    border: 2px solid rgba(0,0,0,1);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.25s ease;
+  }
+  #ordenado select{
+    display: inline-block;
+    width: 125%;
+    cursor: pointer;
+    padding: 7px 10px;
+    height: 42px;
+    outline: 0; 
+    border: 0;
+    border-radius: 0;
+    background: #8f8c8c;
+    font-size: 1.3em;
+    color: rgb(14, 13, 13);
+    font-family: 'Griffy', cursive, sans-serif;
+    border: 2px solid rgba(0,0,0,1);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.25s ease;
+  }
+  #container{
+    margin: 0 0 0 7%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    align-items: center;
+  }
+}
+
+@media only screen and ((max-width:449px) and (min-width:300px)){
+  body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('Fondo-LoL.png');
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Griffy', cursive, sans-serif;
+  }
+  h6{
+    padding: 2%;
+    font-size: 550%;
+    text-align: center;
+    color: #D6A805;
+  }
+  .menu{
+    margin: 0 0 3% 17%;
+    padding: 0;
+    column-count: 1;
+    grid-auto-columns: auto;
+  }
+  #filtro_champions select{
+    display: inline-block;
+    width: 125%;
+    cursor: pointer;
+    padding: 7px 10px;
+    height: 42px;
+    outline: 0; 
+    border: 0;
+    border-radius: 0;
+    background: #8f8c8c;
+    font-size: 1.3em;
+    color: rgb(14, 13, 13);
+    font-family: 'Griffy', cursive, sans-serif;
+    border: 2px solid rgba(0,0,0,1);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.25s ease;
+  }
+  #ordenado select{
+    display: inline-block;
+    width: 125%;
+    cursor: pointer;
+    padding: 7px 10px;
+    height: 42px;
+    outline: 0; 
+    border: 0;
+    border-radius: 0;
+    background: #8f8c8c;
+    font-size: 1.3em;
+    color: rgb(14, 13, 13);
+    font-family: 'Griffy', cursive, sans-serif;
+    border: 2px solid rgba(0,0,0,1);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.25s ease;
+  }
+  #container{
+    margin: 0 0 0 20%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    align-items: center;
   }
   
 }
-
-@media only screen and ((max-width:900px) and (min-width:449px)){}
-
-@media only screen and ((max-width:449px) and (min-width:300px)){}

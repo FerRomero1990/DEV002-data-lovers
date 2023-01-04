@@ -44,28 +44,3 @@ cardsLol(datosChampions);
         console.log(ordenChampions)
         cardsLol(ordenChampions)
     })
-
-
-    /*const oAz = document.getElementById('orden')
-    oAz.addEventListener('change', (evento) => {
-        const ordAz = ordenandoAzChampions(evento)
-        console.log(ordAz)
-        cardsLol(ordAz)
-    })
-    const oZa = document.getElementById('orden')
-    oZa.addEventListener('change', (evento) => {
-        const ordZA = ordenandoZaChampions(evento)
-        cardsLol(ordZA)
-    });*/
-
-    /*document.getElementById("ZA").addEventListener('change', (evento) => {
-        cardsLol(ordenandoZaChampions(evento.target.value))
-    });*/
-
-    /*document.getElementById("orden").addEventListener('change', (evento) => {
-        cardsLol(ordenandoAzChampions(evento.target.value))
-        console.log(evento)
-    });
-    document.getElementById("orden").addEventListener('change', (evento) => {
-        cardsLol(ordenandoZaChampions(evento.target.value))
-    });*/
