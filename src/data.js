@@ -1,5 +1,4 @@
 import { champDat } from './data/lol/lol.js';
-
 export const extrayendoData = (datos) => {
   return(
   Object.values(datos.data));
@@ -36,6 +35,7 @@ export const ordenandoChampions = (sortOrder) => {
   });
 return ordDatos;
 };
+ordenandoChampions()
 
 export const calculoRoles = (rolSelected) => {
   const calculoArray = Object.values(champDat.data);
@@ -43,5 +43,7 @@ export const calculoRoles = (rolSelected) => {
   const rolCalculo = filtrandoChampions(rolSelected);
   const conteoRol = rolCalculo.length;
   const porcentaje = (conteoRol * 100) / totalCalculo;
-  console.log(porcentaje)
+  
+  return porcentaje.toFixed(2);
 }
+calculoRoles()

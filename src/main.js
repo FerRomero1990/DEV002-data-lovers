@@ -5,7 +5,7 @@ import { extrayendoData, filtrandoChampions, ordenandoChampions, calculoRoles } 
 const datosChampions = extrayendoData(champDat)
 
 //Imprimiendo cards en la página principal
-function cardsLol(champions){
+function cardsLol(champions) {
     let container = document.getElementById("container")
     //limpia la página
     container.innerHTML = ''
@@ -13,7 +13,7 @@ function cardsLol(champions){
         container.innerHTML += `
     <div id="cards_champs">
         <div class="card_front">
-          <img src="${champ.splash}" alt="" class="img_champ"/>
+          <img src="${champ.splash}" alt="imagen_del_personaje" class="img_champ"/>
             <h2 id="nameChamp">${champ.name}</h2>
             <h3 id="tagChamp">${champ.tags.join(" & ")}</h3>
         </div>
@@ -27,34 +27,24 @@ function cardsLol(champions){
     </div>`
     });
 }
-cardsLol(datosChampions); 
+cardsLol(datosChampions);
 
 //Incluyendo filtrado
-    
-    document.getElementById("filtro_roles").addEventListener('change', (evento) => {
-        const rolSelected = evento.target.value
-        cardsLol(filtrandoChampions(rolSelected));
-        calculoRoles(rolSelected);
+const calculo = document.getElementById("porcentaje_roles");
+document.getElementById("filtro_roles").addEventListener('change', (evento) => {
+    const rolSelected = evento.target.value;
+    const porcenChampions = calculoRoles(rolSelected);
 
-        let calculo = document.getElementById("porcentaje_roles")
+//Se proyecta en pantalla el porcentaje de cálculo
 
-        const calculoPorcentaje = document.createElement("h4")
-        
-        calculoPorcentaje.innerHTML += `
-        <h4 id="calculo_roles">${"El porcentaje de Champions con este rol es " + calculoRoles(rolSelected) + " %."}</h4>
-        `
-        calculo.appendChild(calculoPorcentaje)
-        
-        /*const calculoPantalla = document.getElementById("porcentaje_roles")
-        const porcenPantalla = document.createElement("h4")
-        porcenPantalla.textContent = ("Los Champions con este rol es del " + calculoRoles(rolSelected) + "%")
-        calculoPantalla.appendChild(porcenPantalla)*/
-    });
+    calculo.innerHTML = `<h4 class="calculo_roles">El porcentaje de Champions con este rol es ${porcenChampions}%.</h4>`
+    cardsLol(filtrandoChampions(rolSelected));
+});
 
 //Incluyendo ordenado
 
-    const ordDatos = document.getElementById("orden");
-    ordDatos.addEventListener ('change', (evento) => {
-        const ordenChampions = ordenandoChampions(evento.target.value)
-        cardsLol(ordenChampions)
-    })
+const ordDatos = document.getElementById("orden");
+ordDatos.addEventListener('change', (evento) => {
+    const ordenChampions = ordenandoChampions(evento.target.value)
+    cardsLol(ordenChampions)
+})

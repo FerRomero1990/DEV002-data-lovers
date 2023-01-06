@@ -19,7 +19,7 @@ h6{
 /* menú con las opciones de filtrado y ordenar */
 .menu{
   margin: 0 0 0 5%;
-  padding: 0 10% 3% 10%;
+  padding: 0 10% 1% 10%;
   column-count: 2;
   grid-auto-columns: auto;
 }
@@ -77,6 +77,11 @@ h6{
 }
 #ordenado select:hover{
 	background: #f1f3f2;
+}
+.calculo_roles{
+  font-size: 150%;
+  text-align: center;
+  color: white;
 }
 
 /* tarjetas */

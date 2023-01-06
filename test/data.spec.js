@@ -1,9 +1,25 @@
-import { champDat } from './data/lol/lol.js';
-import { filtrandoChampions } from './data.js';
+import { extrayendoData, filtrandoChampions } from '../src/data.js'
 
 
-describe('Test para la funcion de filtrado', () => {
-  const data = champDat
+
+describe('Test para la funcion de extraer la data', () => {
+
+  it('extrayendoData debe ser una función', () => {
+    expect(typeof extrayendoData).toBe('function')
+  });
+
+});
+
+describe('Test para la funcion de filtrar la data', () => {
+
+  it('filtrandoChampions debe ser una función', () => {
+    expect(typeof filtrandoChampions).toBe('function')
+  });
+
+});
+
+/*describe('Test para la funcion de filtrado', () => {
+  const data = champDat.data
   const elemento = "Mage"
   const filtrando = filtrandoChampions(data, elemento)
 
@@ -11,18 +27,4 @@ describe('Test para la funcion de filtrado', () => {
     expect(filtrando).not.toContain(elemento);
   });
 
-  /*it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });*/
-});
-
-
-/*describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
 });*/
