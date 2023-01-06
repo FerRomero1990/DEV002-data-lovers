@@ -6,14 +6,14 @@ export const extrayendoData = (datos) => {
 }
 
 export const filtrandoChampions = (selectedRole) => {
-  const filtroDatosChampions = Object.values(champDat.data);
-  let filtroRol = filtroDatosChampions.filter(rol => rol.tags.includes(selectedRole));
+  const filtroArray = Object.values(champDat.data);
+  let filtroRol = filtroArray.filter(rol => rol.tags.includes(selectedRole));
   return filtroRol;
 }
 
 export const ordenandoChampions = (sortOrder) => {
-  const championsArray = Object.values(champDat.data);
-  const ordDatos = championsArray.sort((a, b) => {
+  const ordenArray = Object.values(champDat.data);
+  const ordDatos = ordenArray.sort((a, b) => {
     if(a.name > b.name) {
       if(sortOrder == "az")
       {
@@ -36,3 +36,12 @@ export const ordenandoChampions = (sortOrder) => {
   });
 return ordDatos;
 };
+
+export const calculoRoles = (rolSelected) => {
+  const calculoArray = Object.values(champDat.data);
+  const totalCalculo = calculoArray.length;
+  const rolCalculo = filtrandoChampions(rolSelected);
+  const conteoRol = rolCalculo.length;
+  const porcentaje = (conteoRol * 100) / totalCalculo;
+  console.log(porcentaje)
+}

@@ -1,6 +1,6 @@
 //Manejo del DOM
 import { champDat } from './data/lol/lol.js';
-import { extrayendoData, filtrandoChampions, ordenandoChampions } from './data.js';
+import { extrayendoData, filtrandoChampions, ordenandoChampions, calculoRoles } from './data.js';
 
 const datosChampions = extrayendoData(champDat)
 
@@ -32,8 +32,23 @@ cardsLol(datosChampions);
 //Incluyendo filtrado
     
     document.getElementById("filtro_roles").addEventListener('change', (evento) => {
-        cardsLol(filtrandoChampions(evento.target.value));
-        //console.log(evento)
+        const rolSelected = evento.target.value
+        cardsLol(filtrandoChampions(rolSelected));
+        calculoRoles(rolSelected);
+
+        let calculo = document.getElementById("porcentaje_roles")
+
+        const calculoPorcentaje = document.createElement("h4")
+        
+        calculoPorcentaje.innerHTML += `
+        <h4 id="calculo_roles">${"El porcentaje de Champions con este rol es " + calculoRoles(rolSelected) + " %."}</h4>
+        `
+        calculo.appendChild(calculoPorcentaje)
+        
+        /*const calculoPantalla = document.getElementById("porcentaje_roles")
+        const porcenPantalla = document.createElement("h4")
+        porcenPantalla.textContent = ("Los Champions con este rol es del " + calculoRoles(rolSelected) + "%")
+        calculoPantalla.appendChild(porcenPantalla)*/
     });
 
 //Incluyendo ordenado
@@ -41,6 +56,5 @@ cardsLol(datosChampions);
     const ordDatos = document.getElementById("orden");
     ordDatos.addEventListener ('change', (evento) => {
         const ordenChampions = ordenandoChampions(evento.target.value)
-        console.log(ordenChampions)
         cardsLol(ordenChampions)
     })
