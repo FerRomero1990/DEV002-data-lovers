@@ -71,19 +71,23 @@ Esta HU se define de la siguiente manera:
 
 _Yo como:_ Jugador de League of Legends
 _Quiero:_ Poder filtrar los champions de acuerdo a su rol o roles
-_Para:_ Tener claridad sobre cuales champions pueden ser una buena alianza para ganar las partidas
+_Para:_ Tener claridad sobre cuales champions pueden ser una buena
+alianza para ganar las partidas
 
-Posteriormente para llegar a cumplir a cabalidad con la HU2 se requería que
+Posteriormente para llegar a cumplir a cabalidad con la HU2 se
+requería que
 cumpliera con los siguientes parametros:
 
 **Criterios de aceptación:**
 
--El jugador debe poder encontrar un filtro que le permita tener acceso puntual a los roles de los champions.
+-El jugador debe poder encontrar un filtro que le permita tener
+acceso puntual a los roles de los champions.
 -El jugador debe poder seleccionar los diferentes roles 
 
 **Definición de terminado:**
 
--Ubicar en pantalla un select que contenga los 6 roles existentes de los champions
+-Ubicar en pantalla un select que contenga los 6 roles existentes
+de los champions
 -Lograr realizar el filtro por rol 
 
 ### Historia de Usuario 3 (_Ordenar los campeones de forma alfabetica de forma ascendente y descendente_)
@@ -91,20 +95,25 @@ cumpliera con los siguientes parametros:
 Esta HU se define de la siguiente manera:
 
 _Yo como:_ Jugador de League of Legends
-_Quiero:_ Poder ordenar los champions de manera ascendente y descendente alfabeticamente.
+_Quiero:_ Poder ordenar los champions de manera ascendente y
+descendente alfabeticamente.
 _Para:_ Poderlos ubicar facilmente
 
-Posteriormente para llegar a cumplir a cabalidad con la HU3 se requería que
+Posteriormente para llegar a cumplir a cabalidad con la HU3
+se requería que
 cumpliera con los siguientes parametros:
 
 **Criterios de aceptación:**
 
--El jugador debe poder encontrar un select que le permita tener acceso a las 2 formas de ordenado ascendente o descendente
--El jugador debe poder seleccionar alguna de las opciones y esta debe verse reflejada en pantalla. 
+-El jugador debe poder encontrar un select que le permita
+tener acceso a las 2 formas de ordenado ascendente o descendente
+-El jugador debe poder seleccionar alguna de las opciones y
+esta debe verse reflejada en pantalla. 
 
 **Definición de terminado:**
 
--Ubicar en pantalla un select que contenga las 2 opciones de ordenado
+-Ubicar en pantalla un select que contenga las 2 opciones
+de ordenado
 -Lograr realizar el ordenado de manera ascendente o descendente.
 
 ### Historia de Usuario 4 (_Cálculo porcentual basado en el filtro_)
@@ -115,14 +124,17 @@ _Yo como:_ Jugador de League of Legends
 _Quiero:_ Poder ver el porcentaje de cualquier rol
 _Para:_ Tener en cuenta a la hora de seleccionar mi campeón
 
-Posteriormente para llegar a cumplir a cabalidad con la HU4 se requería que
+Posteriormente para llegar a cumplir a cabalidad con la HU4
+se requería que
 cumpliera con los siguientes parametros:
 
 **Criterios de aceptación:**
 
--El jugador debe poder encontrar un filtro que le permita tener acceso puntual a los roles de los champions.
+-El jugador debe poder encontrar un filtro que le permita tener
+acceso puntual a los roles de los champions.
 -El jugador debe poder seleccionar los diferentes roles .
--El jugador debe poder visualizar en pantalla el porcentaje que representa el rol seleccionado
+-El jugador debe poder visualizar en pantalla el porcentaje que
+representa el rol seleccionado
 
 **Definición de terminado:**
 
@@ -131,7 +143,9 @@ cumpliera con los siguientes parametros:
 
 ## 3. Skecth (Prototipo de Baja Fidelidad)
 
-Teniendo en cuenta que el producto debe ser responsivo fue necesario diseñar prototipos de baja fidelidad para cada una de las diferentes pantallas.
+Teniendo en cuenta que el producto debe ser responsivo fue necesario
+diseñar prototipos de baja fidelidad para cada una de las diferentes
+pantallas.
 
 **Prototipo de Baja Fidelidad** _Pantalla Móvil_
 
@@ -147,7 +161,8 @@ Teniendo en cuenta que el producto debe ser responsivo fue necesario diseñar pr
 
 ## 4. Diseño de la Interfaz de Usuario (Prototipo de Alta Fidelidad)
 
-Contando con los diferentes skecth se realizaron los prototipos de alta fidelidad para cada una de las pantallas.
+Contando con los diferentes skecth se realizaron los prototipos de
+alta fidelidad para cada una de las pantallas.
 
 **Prototipo de Alta Fidelidad** _Pantalla Móvil_
 
@@ -171,6 +186,7 @@ Contando con los diferentes skecth se realizaron los prototipos de alta fidelida
 
 ## 7. Producto Final
 
-Finalmente tenemos un producto que cumple con las historias de usuario que nos permiten cumplir satisfactoriamente con lo requerido por los jugadores.
+Finalmente tenemos un producto que cumple con las historias de
+usuario que nos permiten cumplir satisfactoriamente con lo requerido por los jugadores.
 
 **Página Web Final**
