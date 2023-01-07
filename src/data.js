@@ -1,49 +1,40 @@
-import { champDat } from './data/lol/lol.js';
 export const extrayendoData = (datos) => {
-  return(
-  Object.values(datos.data));
+  return (Object.values(datos.data));
 }
 
-export const filtrandoChampions = (selectedRole) => {
-  const filtroArray = Object.values(champDat.data);
-  let filtroRol = filtroArray.filter(rol => rol.tags.includes(selectedRole));
+export const filtrandoChampions = (selectedRole, data) => {
+  const filtroRol = data.filter(rol => rol.tags.includes(selectedRole));
   return filtroRol;
 }
 
-export const ordenandoChampions = (sortOrder) => {
-  const ordenArray = Object.values(champDat.data);
-  const ordDatos = ordenArray.sort((a, b) => {
-    if(a.name > b.name) {
-      if(sortOrder == "az")
-      {
+export const ordenandoChampions = (sortOrder, data) => {
+  const ordDatos = [...data].sort((a, b) => {
+    if (a.name > b.name) {
+      if (sortOrder === "az") {
         return 1;
       }
       else {
-        return -1
+        return -1;
       }
     }
-    if(a.name < b.name) {
-      if(sortOrder == "za")
-      {
-        return -1
+    if (a.name < b.name) {
+      if (sortOrder === "za") {
+        return -1;
       }
       else {
-        return 1
+        return 1;
       }
     }
     return 0;
   });
-return ordDatos;
+  return ordDatos;
 };
-ordenandoChampions()
 
-export const calculoRoles = (rolSelected) => {
-  const calculoArray = Object.values(champDat.data);
-  const totalCalculo = calculoArray.length;
-  const rolCalculo = filtrandoChampions(rolSelected);
+export const calculoRoles = (rolSelected, data) => {
+  const totalCalculo = data.length;
+  const rolCalculo = filtrandoChampions(rolSelected, data);
   const conteoRol = rolCalculo.length;
   const porcentaje = (conteoRol * 100) / totalCalculo;
-  
+
   return porcentaje.toFixed(2);
 }
-calculoRoles()

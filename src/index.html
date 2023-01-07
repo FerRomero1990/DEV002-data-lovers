@@ -15,32 +15,36 @@
 </head>
 
 <body>
-  <h6>League of Legends</h6>
-  <nav class="menu">
-    <div id="filtro_champions">
-      <select id="filtro_roles">
-        <option>Filtrar por Rol...</option>
-        <option value="Fighter">Figther</option>
-        <option value="Tank">Tank</option>
-        <option value="Mage">Mage</option>
-        <option value="Assassin">Assassin</option>
-        <option value="Support">Support</option>
-        <option value="Marksman">Marksman</option>
-      </select>
-      <i></i>
+  <header>
+    <h6>League of Legends</h6>
+    <nav class="menu">
+      <div id="filtro_champions">
+        <select id="filtro_roles">
+          <option>Filtrar por Rol...</option>
+          <option value="Fighter">Figther</option>
+          <option value="Tank">Tank</option>
+          <option value="Mage">Mage</option>
+          <option value="Assassin">Assassin</option>
+          <option value="Support">Support</option>
+          <option value="Marksman">Marksman</option>
+        </select>
+        <i></i>
+      </div>
+      <div id="ordenado">
+        <select id="orden">
+          <option>Ordenar...</option>
+          <option value="az">De la A a la Z</option>
+          <option value="za">De la Z a la A</option>
+        </select>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div id="porcentaje_roles"><!--Se generan los porcentajes--></div>
+    <div id="container">
+      <div class="cards"></div>
     </div>
-    <div id="ordenado">
-      <select id="orden">
-        <option>Ordenar...</option>
-        <option value="az" id="AZ">De la A a la Z</option>
-        <option value="za" id="ZA">De la Z a la A</option>
-      </select>
-      <i></i>
-    </div>
-  </nav>
-  <div id="porcentaje_roles"><!--Se generan los porcentajes--></div>
-  <div id="container">
-  </div>
+  </main>
   <script src="main.js" type="module"></script>
 </body>
 
