@@ -149,15 +149,15 @@ pantallas.
 
 **Prototipo de Baja Fidelidad** _Pantalla Móvil_
 
-
+![proto-bf-pm](https://github.com/FerRomero1990/DEV002-data-lovers/blob/main/Prototipo%20BF%20Pantalla%20M%C3%B3vil.jpeg)
 
 **Prototipo de Baja Fidelidad** _Pantalla tipo Tablet o Ipad_
 
-
+![proto-bf-pt](https://github.com/FerRomero1990/DEV002-data-lovers/blob/main/Prototipo%20BF%20Pantalla%20Tablet.jpeg)
 
 **Prototipo de Baja Fidelidad** _Pantalla Desktop_
 
-
+![proto-bf-pd](https://github.com/FerRomero1990/DEV002-data-lovers/blob/main/Prototipo%20BF%20Pantalla%20Desktop.jpeg)
 
 ## 4. Diseño de la Interfaz de Usuario (Prototipo de Alta Fidelidad)
 
@@ -166,15 +166,15 @@ alta fidelidad para cada una de las pantallas.
 
 **Prototipo de Alta Fidelidad** _Pantalla Móvil_
 
-
+![proto-af-pm](https://github.com/FerRomero1990/DEV002-data-lovers/blob/main/Prototipo%20AF%20Pantalla%20M%C3%B3vil.png)
 
 **Prototipo de Alta Fidelidad** _Pantalla tipo Tablet o Ipad_
 
-
+![proto-af-pt](https://github.com/FerRomero1990/DEV002-data-lovers/blob/main/Prototipo%20AF%20Pantalla%20Tablet.png)
 
 **Prototipo de Alta Fidelidad** _Pantalla Desktop_
 
-
+![proto-af-pd](https://github.com/FerRomero1990/DEV002-data-lovers/blob/main/Prototipo%20AF%20Pantalla%20Desktop.png)
 
 ## 5. Link a Zeplin
 
@@ -182,7 +182,7 @@ alta fidelidad para cada una de las pantallas.
 
 ## 6. Problemas en los Tests de Usabilidad
 
-
+No se presentaron
 
 ## 7. Producto Final
 
