@@ -1,5 +1,16 @@
 import { extrayendoData, filtrandoChampions, ordenandoChampions, calculoRoles } from '../src/data.js'
 
+const dataOriginal =  {
+type: "champion",
+format: "standAloneComplex",
+version: "6.24.1",
+data: {
+  Aatrox: {name: "Aatrox", tags: ["Fighter", "Tank"]},
+          Gnar: {name: "Gnar", tags: ["Fighter", "Tank"]},
+          Nami: {name: "Nami", tags: ["Support", "Mage"]},
+          Pantheon: {name: "Pantheon", tags: ["Fighter", "Assassin"]},
+          Quinn: {name: "Quinn", tags: ["Marksman", "Fighter"]}}};
+
 const dataChamp =  [{name: "Aatrox", tags: ["Fighter", "Tank"]},
           {name: "Gnar", tags: ["Fighter", "Tank"]},
           {name: "Nami", tags: ["Support", "Mage"]},
@@ -11,6 +22,10 @@ describe('Test para la funcion de extraer la data', () => {
   it('extrayendoData debe ser una función', () => {
     expect(typeof extrayendoData).toBe('function')
   });
+
+  it('Se convertira un objeto en un array', () => {
+    expect(extrayendoData(dataOriginal).toEqual(dataChamp));
+  })
 
 });
 
@@ -39,19 +54,22 @@ describe('Test para la funcion de ordenar la data', () => {
     expect(typeof ordenandoChampions).toBe('function')
   });
 
-});
-
-describe('La función debería ordenar los datos en forma ascendente', () => {
-  const data = dataChamp
-  const deAz = data
-  const ordenando = ordenandoChampions(data, deAz)
-
   it('La funcion deberá ordenar de la a a la z', () => {
-    expect(ordenando).toEqual([{name: "Aatrox", tags: ["Fighter", "Tank"]},
-    {name: "Gnar", tags: ["Fighter", "Tank"]},
-    {name: "Nami", tags: ["Support", "Mage"]},
+
+    const ordenando = ordenandoChampions("az", dataChamp)
+
+    expect(ordenando).toEqual(dataChamp);
+  });
+
+  it('La funcion deberá ordenar de la z a la a', () => {
+
+    const ordenando = ordenandoChampions("za", dataChamp)
+
+    expect(ordenando).toEqual([{name: "Quinn", tags: ["Marksman", "Fighter"]},
     {name: "Pantheon", tags: ["Fighter", "Assassin"]},
-    {name: "Quinn", tags: ["Marksman", "Fighter"]}]);
+    {name: "Nami", tags: ["Support", "Mage"]},
+    {name: "Gnar", tags: ["Fighter", "Tank"]},
+    {name: "Aatrox", tags: ["Fighter", "Tank"]}]);
   });
 
 });
