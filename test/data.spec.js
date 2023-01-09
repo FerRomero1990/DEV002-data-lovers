@@ -25,7 +25,7 @@ describe('Test para la funcion de extraer la data', () => {
 
   it('Se convertira un objeto en un array', () => {
     expect(extrayendoData(dataOriginal).toEqual(dataChamp));
-  })
+  });
 
 });
 
